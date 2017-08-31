@@ -29,15 +29,28 @@
 	}
 
 	void display(){
-	  while(root!=NULL){
-	    printf("%d\t",root->data);
-	    root=root->link;
+	 struct node *k=root;
+	  while(k!=NULL){
+	    printf("%d\t",k->data);
+	    k=k->link;
 	  }
 	}
+
+	void length(){
+	 struct node *p=root;
+	  int counter=0;
+	  while(p!=NULL){
+	   counter++;
+	    p=p->link;
+	   }
+	   printf("%d",counter);
+	}
+
 	void main(){
 	 clrscr();
 	 add();
 	 add();
 	 display();
+	 length();
 	 getch();
 	}
